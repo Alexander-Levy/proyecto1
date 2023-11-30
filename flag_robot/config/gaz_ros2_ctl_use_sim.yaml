@@ -1,0 +1,6 @@
+# Parameters file for using ros2 control in a simulation enviroment  
+
+# Controller manager Parameters
+controller_manager:
+  ros__parameters:
+    use_sim_time: True # use_sim_time is set to true in simulations

@@ -1,0 +1,33 @@
+# Parameters file for joy and teleop nodes
+
+# JoyStick Node Paremeters
+joy_node:
+  ros__parameters:
+    # System Parameters
+    device_id: 0  # Controller ID with host system
+    deadzone: 0.05  # Deazone size, increase if controller dritf is an issue
+    autorepeat_rate: 20.0  # Joy node auto-repeat rate
+
+# Teleop Node Parameters
+teleop_node:
+  ros__parameters:
+    # Left thumb stick vertical
+    axis_linear:  
+      x: 1
+    scale_linear:
+      x: 0.5
+    scale_linear_turbo:
+      x: 1.0
+
+    # Left thumb stick horizontal
+    axis_angular:  
+      yaw: 0
+    scale_angular:
+      yaw: 0.5
+    scale_angular_turbo:
+      yaw: 1.0
+
+    # Enable button Parameters 
+    require_enable_button: true # Should be set to true if nav2 is in use
+    enable_button: 7  # Left shoulder button
+    enable_turbo_button: 8  # Right shoulder button

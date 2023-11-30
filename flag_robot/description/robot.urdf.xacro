@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro"  name="robot">
+
+    <!-- We define variables to configure our robot correctly  -->
+
+    <!-- We initialize our robot for real time and with ros2 control enable  -->
+    <xacro:arg name="use_ros2_control" default="true"/>
+    <xacro:arg name="sim_mode" default="false"/>
+
+    <!-- We include the core of our robot -->
+    <xacro:include filename="robot_core.xacro" />
+
+    <!-- We include the lidar in our robot -->
+    <xacro:include filename="lidar.xacro" />
+
+    <!-- We include the camera in our robot  -->
+    <xacro:include filename="camera.xacro" />
+
+    <!-- We include the selected control file -->
+
+    <!-- If use_ros2_control is true we include the ros2_control.xacro file -->
+    <xacro:if value="$(arg use_ros2_control)">
+        <xacro:include filename="ros2_control.xacro" />
+    </xacro:if>
+
+    <!-- If use_ros2_control is false we include the gazebo_control.xacro file -->
+    <xacro:unless value="$(arg use_ros2_control)">
+        <xacro:include filename="gazebo_control.xacro" />
+    </xacro:unless>
+
+</robot>

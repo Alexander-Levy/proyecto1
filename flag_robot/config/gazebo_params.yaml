@@ -1,0 +1,6 @@
+# Parameters file for initializing Gazebo simulation enviroment
+
+# Gazebo Parameters
+gazebo:
+  ros__parameters:
+    publish_rate: 400.0 # Increased the publish rate so that we have a smooth and responsive simulation

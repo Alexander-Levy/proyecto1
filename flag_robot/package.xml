@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+
+<package format="3">
+
+  <!-- Package Info -->
+  <name>flag_robot</name> <!-- Package name -->
+  <version>0.0.1</version> <!-- Package version -->
+  <description>A Flag capturing robot</description> <!-- Package description -->
+  <maintainer email="ingalexanderlevy@gmail.com">Alexander Levy</maintainer> <!-- Package engineer -->
+  <license>Levy</license> <!-- Package's liscense owner -->
+  
+  <!-- Build dependency -->
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <!-- rviz dependency -->
+  <exec_depend>rviz2</exec_depend>
+
+  <!-- ROS2 dependencies -->
+  <exec_depend>launch</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
+  <exec_depend>ros2launch</exec_depend>
+
+  <!-- Xacro dependency -->
+  <exec_depend>xacro</exec_depend>
+
+  <!-- ros2 control dependencies -->
+  <depend>rclcpp</depend>
+  <depend>std_msgs</depend>
+  <depend>ros2_control</depend>
+  <depend>hardware_interface</depend>
+  <exec_depend>control_msgs</exec_depend>
+  <exec_depend>ros2controlcli</exec_depend>
+  <exec_depend>controller_manager</exec_depend>
+  <exec_depend>velocity_controllers</exec_depend>
+  <exec_depend>diff_drive_controller</exec_depend>
+
+  <!-- Gazebo dependencies -->
+  <exec_depend>ros_gz</exec_depend>
+  <exec_depend>ros_gz_sim</exec_depend>
+  <exec_depend>gz_ros2_control</exec_depend>
+
+  <!-- JoyStick & TeleOperations dependencies -->
+  <exec_depend>joy</exec_depend>
+  <exec_depend>teleop_twist_joy</exec_depend>
+  <exec_depend>twist_mux</exec_depend>
+  
+  <!-- Robot State Publisher dependencies -->
+  <exec_depend>robot_state_publisher</exec_depend>
+  <exec_depend>joint_state_broadcaster</exec_depend>
+  <exec_depend>joint_trajectory_controller</exec_depend>
+  
+  <!-- SLAM and Nav2 dependencies -->
+  <exec_depend>navigation2</exec_depend>
+  <exec_depend>slam_toolbox</exec_depend>
+  <exec_depend>nav2_bringup</exec_depend>
+  <exec_depend>nav2_bringup</exec_depend>
+
+  <!-- Test dependencies -->
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+  <!-- Exports -->
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+
+</package>

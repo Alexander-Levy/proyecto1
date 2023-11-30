@@ -1,0 +1,16 @@
+# Parameters file for the twist multiplexer node
+
+# Twist Mux Parameters
+twist_mux:
+  ros__parameters:
+    topics:
+      # Parameters for navigation commands
+      navigation:
+        topic   : cmd_vel
+        timeout : 0.5
+        priority: 10
+      # Parameters for joystick commands
+      joystick:
+        topic   : cmd_vel_joy
+        timeout : 0.5
+        priority: 100
